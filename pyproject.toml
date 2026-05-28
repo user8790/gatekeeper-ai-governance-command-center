@@ -1,0 +1,33 @@
+[project]
+name = "gatekeeper-ai-governance-command-center"
+version = "0.1.0"
+description = "Synthetic pediatric diabetes AI governance command center with Snowflake-portable metric logic."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "plotly>=5.24",
+    "streamlit>=1.40",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.8",
+]
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
