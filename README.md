@@ -4,6 +4,8 @@ Gatekeeper is a working Streamlit prototype for post-model AI governance in a sy
 diabetes / DKA risk monitoring context. It evaluates model behavior at the system level across
 safety, equity, calibration, drift, data quality, reliability, and audit readiness.
 
+Live app: [gatekeeper-ai-governance.streamlit.app](https://gatekeeper-ai-governance.streamlit.app/)
+
 This is not a diagnostic tool, treatment recommendation tool, or patient-level clinical decision
 support tool. It uses synthetic data only.
 
