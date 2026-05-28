@@ -18,3 +18,5 @@ reports/*.html
 reports/*.pdf
 reports/*.png
 data/generated/*.csv
+.runtime/
+tools/
