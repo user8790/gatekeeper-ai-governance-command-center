@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import sys
 from dataclasses import asdict
 from pathlib import Path
 
@@ -7,6 +8,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+
+APP_ROOT = Path(__file__).resolve().parent
+SRC = APP_ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
 
 from gatekeeper.contracts import SUBGROUP_DIMENSIONS
 from gatekeeper.data_providers import SCENARIOS, ScenarioProvider
@@ -19,7 +25,6 @@ from gatekeeper.reports import (
     percent,
 )
 
-APP_ROOT = Path(__file__).resolve().parent
 STATUS_COLORS = {
     "PASS": "#167a5b",
     "WATCH": "#5c6676",
